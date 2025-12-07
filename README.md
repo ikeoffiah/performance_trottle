@@ -36,19 +36,6 @@ UI
 - MultilineChart (fl_chart): lines for x, y, z (straight) and magnitude (curved) over the recent window.
 - Floating actions: Start/Stop stream, Clear history; tip to move device.
 
-Why Native Throttling?
-- Prevents flooding the Dart side and widgets with 60–100+ updates/sec.
-- Reduces GC pressure and widget rebuilds; keeps UI responsive and battery usage reasonable.
-- Guarantees consistent, device-level cadence before crossing the platform boundary.
-
-Throttle vs Debounce
-- Throttle chosen to provide regular 4 Hz snapshots during continuous motion.
-- Debounce would delay until inactivity and is less suitable for live telemetry.
-
-Considerations
-- Physical device is recommended; emulators/simulators often lack real accelerometer data.
-- Chosen sampling intervals balance smoothness, responsiveness, and power.
-- Error handling surfaces sensor absence/errors; stream is cleanly canceled.
 
 Running
 - flutter pub get
