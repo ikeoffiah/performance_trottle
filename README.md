@@ -16,7 +16,7 @@ Architecture
 
 Native Implementation
 Android (Kotlin)
-- Registers SensorManager listener for TYPE_ACCELEROMETER with SENSOR_DELAY_GAME (~50 Hz+ practical), captures SensorEvent values.
+- Registers SensorManager listener for TYPE_ACCELEROMETER with SENSOR_DELAY_FASTEST (maximum device-supported rate), captures SensorEvent values.
 - Throttles using lastEmitTime and THROTTLE_INTERVAL_MS = 250; only emits when 250ms have elapsed.
 - Emits a map to EventChannel; handles no-sensor error; unregisters on cancel.
 
