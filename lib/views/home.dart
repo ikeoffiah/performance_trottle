@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Expanded(child: NumberCard()),
                   const SizedBox(width: 12),
-                  Expanded(child: RadialGuage()),
+                  Expanded(child: RadialGauge()),
                 ],
               ),
               const SizedBox(height: 12),

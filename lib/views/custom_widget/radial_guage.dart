@@ -4,8 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:test_1/view_models/accel_view_model.dart';
 
 
-class RadialGuage extends StatelessWidget {
-  const RadialGuage({super.key});
+class RadialGauge extends StatelessWidget {
+  const RadialGauge({super.key});
 
   @override
   Widget build(BuildContext context) {
