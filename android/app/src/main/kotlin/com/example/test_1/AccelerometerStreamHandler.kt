@@ -48,7 +48,7 @@ class AccelerometerStreamHandler(private val context: Context): EventChannel.Str
             sensorManager?.registerListener(
                 sensorListener,
                 it,
-                SensorManager.SENSOR_DELAY_GAME // ~50Hz, fast enough for 60+ updates
+                SensorManager.SENSOR_DELAY_FASTEST
             )
         } ?: run {
             events?.error("NO_SENSOR", "Accelerometer not available", null)
